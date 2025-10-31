@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Заказ кофе</string>
+    <string name="milk">Молоко</string>
+    <string name="order_button">Заказать</string>
+    <string name="cream">Сливки</string>
+    <string name="sugar">Сахар</string>
+    <string name="select_additions">Добавить к кофе</string>
+    <string name="no_additions">Без добавок</string>
+    <string name="select_coffee">Кофе</string>
+    <string name="select_dish">Блюдо</string>
+    <string name="enter_name_hint">Имя</string>
+    <string name="coffee_order_title">Заказ кофе</string>
+</resources>

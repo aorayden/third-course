@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="coffee_options">
+        <item>Нет</item>
+        <item>Латте</item>
+        <item>Эспрессо</item>
+        <item>Американо</item>
+        <item>Раф</item>
+    </string-array>
+
+    <string-array name="dish_options">
+        <item>Нет</item>
+        <item>Сэндвич</item>
+        <item>Цезарь</item>
+        <item>Маффин</item>
+        <item>Круассан</item>
+    </string-array>
+</resources>
