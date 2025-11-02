@@ -1,6 +1,7 @@
 package com.example.ordercoffee;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        addImageToCoffeeSpinner();
+        addImageToDishSpinner();
         initializeViews();
         setupListeners();
     }
@@ -94,12 +97,28 @@ public class MainActivity extends AppCompatActivity {
         }
         var coffee = spinnerCoffee.getSelectedItem().toString();
         var dish = spinnerDish.getSelectedItem().toString();
-        var addition = getSelectedAddition();
+        var addition = getSelectedAddition().toLowerCase();
 
         var intent = new Intent(this, OrderStatusActivity.class);
 
+        // Получаем URI изображений из адаптеров (если доступны)
+        if (spinnerCoffee.getAdapter() instanceof CoffeeAdapter) {
+            CoffeeAdapter coffeeAdapter = (CoffeeAdapter) spinnerCoffee.getAdapter();
+            java.net.URI ignore = null; // no-op to keep formatting consistent
+            Uri coffeeUri = coffeeAdapter.getImageUri(spinnerCoffee.getSelectedItemPosition());
+            if (coffeeUri != null) {
+                intent.putExtra("coffee_image_uri", coffeeUri.toString());
+            }
+        }
+        if (spinnerDish.getAdapter() instanceof DishAdapter) {
+            DishAdapter dishAdapter = (DishAdapter) spinnerDish.getAdapter();
+            Uri dishUri = dishAdapter.getImageUri(spinnerDish.getSelectedItemPosition());
+            if (dishUri != null) {
+                intent.putExtra("dish_image_uri", dishUri.toString());
+            }
+        }
+
         if (coffee.equals("Нет")) {
-            // Блюдо - да, кофе с добавками - не отображаем.
             if (dish.equals("Нет")) {
                 Toast.makeText(this, "Выберите хотя-бы что-то", Toast.LENGTH_SHORT).show();
                 return;
@@ -109,24 +128,20 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("name", name);
             intent.putExtra("dish", dish);
         } else if (dish.equals("Нет")) {
-            // Кофе с добавками - да, блюдо - не отображаем.
             if (addition.equals("Без добавок")) {
                 Toast.makeText(this, "Заказ для " + name + ":\n" + coffee + " без добавок", Toast.LENGTH_LONG).show();
-            }
-            else {
-                Toast.makeText(this, "Заказ для " + name + ":\n" + coffee + "с " + addition, Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Заказ для " + name + ":\n" + coffee + " с " + addition, Toast.LENGTH_LONG).show();
             }
 
             intent.putExtra("name", name);
             intent.putExtra("coffee", coffee);
             intent.putExtra("addition", addition);
         } else {
-            // Кофе с добавками и блюдо - да.
             if (addition.equals("Без добавок")) {
                 Toast.makeText(this, "Заказ для " + name + ":\n" + coffee + " без добавок" + "\n" + dish, Toast.LENGTH_LONG).show();
-            }
-            else {
-                Toast.makeText(this, "Заказ для " + name + ":\n" + coffee + "с " + addition + "\n" + dish, Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Заказ для " + name + ":\n" + coffee + " с " + addition + "\n" + dish, Toast.LENGTH_LONG).show();
             }
 
             intent.putExtra("name", name);
@@ -137,16 +152,32 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void processSelectCoffee() {
-
-    }
-
     private String getSelectedAddition() {
         var id = radioGroupAdditions.getCheckedRadioButtonId();
         if (id != -1) {
             return ((RadioButton) findViewById(id)).getText().toString();
         }
         return "Без добавок";
+    }
+
+    private void addImageToCoffeeSpinner() {
+        Spinner spinner = findViewById(R.id.spinnerCoffee);
+
+        var names = getResources().getStringArray(R.array.coffee_options);
+        var images = getResources().obtainTypedArray(R.array.coffee_images);
+
+        var adapter = new CoffeeAdapter(this, names, images);
+        spinner.setAdapter(adapter);
+    }
+
+    private void addImageToDishSpinner() {
+        Spinner spinner = findViewById(R.id.spinnerDish);
+
+        var names = getResources().getStringArray(R.array.dish_options);
+        var images = getResources().obtainTypedArray(R.array.dish_images);
+
+        var adapter = new DishAdapter(this, names, images);
+        spinner.setAdapter(adapter);
     }
 
     private abstract static class SimpleTextWatcher implements TextWatcher {

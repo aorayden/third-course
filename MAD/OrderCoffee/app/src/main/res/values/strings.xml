@@ -10,4 +10,7 @@
     <string name="select_dish">Блюдо</string>
     <string name="enter_name_hint">Имя</string>
     <string name="coffee_order_title">Заказ кофе</string>
+    <string name="yourOrder">Ваш заказ:</string>
+    <string name="processingOrder">Заказ готовится..</string>
+    <string name="forName">Для кого:</string>
 </resources>

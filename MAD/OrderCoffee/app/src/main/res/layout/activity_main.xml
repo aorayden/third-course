@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!-- Растяжение на весь экран: match_parent -->
-
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -43,7 +40,6 @@
         android:id="@+id/spinnerCoffee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/coffee_options"
         android:minHeight="48dp"
         android:layout_marginBottom="16dp" />
 
@@ -58,7 +54,6 @@
         android:id="@+id/spinnerDish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/dish_options"
         android:minHeight="48dp"
         android:layout_marginBottom="16dp" />
 
@@ -107,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/order_button"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:paddingHorizontal="32dp"
         android:paddingVertical="12dp" />
 </LinearLayout>

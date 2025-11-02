@@ -15,4 +15,18 @@
         <item>Маффин</item>
         <item>Круассан</item>
     </string-array>
+
+    <array name="coffee_images">
+        <item>@drawable/latte</item>
+        <item>@drawable/espresso</item>
+        <item>@drawable/americano</item>
+        <item>@drawable/raf</item>
+    </array>
+
+    <array name="dish_images">
+        <item>@drawable/sandwich</item>
+        <item>@drawable/caesar</item>
+        <item>@drawable/muffin</item>
+        <item>@drawable/croissant</item>
+    </array>
 </resources>

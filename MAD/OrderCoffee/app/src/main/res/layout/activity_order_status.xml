@@ -4,20 +4,115 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yourOrder"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Для кого: Имя -->
+    <TextView
+        android:id="@+id/tvForName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forName"
+        android:textSize="16sp"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Строка: ИзображениеКофе + НаименованиеКофе с НаименованиеДобавки -->
+    <LinearLayout
+        android:id="@+id/coffeeRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tvForName"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ivCoffeeImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:id="@+id/tvCoffeeDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dishRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/coffeeRow"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ivDishImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:id="@+id/tvDishDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="16sp"/>
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tvOrderStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:text="@string/processingOrder"
+        android:textSize="16sp"
+        android:layout_below="@id/dishRow"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvOrderStatus"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:max="100"
         android:progress="0" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вернуться"
+        android:visibility="gone"
+        android:layout_below="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"/>
 </RelativeLayout>
