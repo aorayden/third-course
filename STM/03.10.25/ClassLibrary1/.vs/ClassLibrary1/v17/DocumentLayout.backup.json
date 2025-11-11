@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Git\\College\\third-course\\STM\\03.10.25\\ClassLibrary1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{340E668A-EB2E-40FA-86DF-4194E89321FD}|TestProject1\\TestProject1.csproj|c:\\git\\college\\third-course\\stm\\03.10.25\\classlibrary1\\testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{340E668A-EB2E-40FA-86DF-4194E89321FD}|TestProject1\\TestProject1.csproj|solutionrelative:testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C5826D9-A245-4F03-BA1D-7C8B74404E94}|ClassLibrary1\\ClassLibrary1.csproj|c:\\git\\college\\third-course\\stm\\03.10.25\\classlibrary1\\classlibrary1\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C5826D9-A245-4F03-BA1D-7C8B74404E94}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Git\\College\\third-course\\STM\\03.10.25\\ClassLibrary1\\TestProject1\\obj\\Debug\\net8.0\\TestProject1.GlobalUsings.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TestProject1\\obj\\Debug\\net8.0\\TestProject1.GlobalUsings.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Git\\College\\third-course\\STM\\03.10.25\\ClassLibrary1\\TestProject1\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject1\\UnitTest1.cs",
+              "ToolTip": "C:\\Git\\College\\third-course\\STM\\03.10.25\\ClassLibrary1\\TestProject1\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject1\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T18:27:17.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Git\\College\\third-course\\STM\\03.10.25\\ClassLibrary1\\ClassLibrary1\\Class1.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Class1.cs",
+              "ToolTip": "C:\\Git\\College\\third-course\\STM\\03.10.25\\ClassLibrary1\\ClassLibrary1\\Class1.cs",
+              "RelativeToolTip": "ClassLibrary1\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T18:24:41.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TestProject1.GlobalUsings.g.cs",
+              "DocumentMoniker": "C:\\Git\\College\\third-course\\STM\\03.10.25\\ClassLibrary1\\TestProject1\\obj\\Debug\\net8.0\\TestProject1.GlobalUsings.g.cs",
+              "RelativeDocumentMoniker": "TestProject1\\obj\\Debug\\net8.0\\TestProject1.GlobalUsings.g.cs",
+              "ToolTip": "C:\\Git\\College\\third-course\\STM\\03.10.25\\ClassLibrary1\\TestProject1\\obj\\Debug\\net8.0\\TestProject1.GlobalUsings.g.cs",
+              "RelativeToolTip": "TestProject1\\obj\\Debug\\net8.0\\TestProject1.GlobalUsings.g.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T18:49:20.303Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
