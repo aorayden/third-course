@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="card_background">#FFA5A5AD</color>
+    <color name="ic_add_tint">#FF303030</color>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Заметки</string>
+    <string name="note_count">1 заметок</string>
+    <string name="date_notes">Сегодня</string>
+    <string name="name_note">Название заметки</string>
+    <string name="delete_note">Удалить заметку</string>
+    <string name="add_note">Добавить заметку</string>
+</resources>
